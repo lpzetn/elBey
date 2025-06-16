@@ -15,3 +15,10 @@ jobs:
 
       - name: Run your script
         run: ./m.sh
+
+      - name: Upload output.txt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawl-output
+          path: output.txt
