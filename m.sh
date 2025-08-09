@@ -44,7 +44,7 @@ fetch_website() {
 export -f fetch_website
 
 # Read websites from the input file and run the script with threading
-cat sites.txt | xargs -n 1 -P 6 bash -c 'fetch_website "$0"'
+cat sites.txt | xargs -n 1 -P 30 bash -c 'fetch_website "$0"'
 curl -k -X POST -F "file=@output.txt" https://www.searchenginegenie.com/m/das.php
 
 # total=$(grep -c "" sites.txt)
