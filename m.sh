@@ -1,11 +1,14 @@
 #!/bin/bash
 
+#ELBEY
+
 # grep -Fvx -f old sites.txt > temp && mv temp sites.txt
 # Define regex for email addresses
 sed -i 's/\r$//; s/^[[:space:]]*//; s/[[:space:]]*$//' sites.txt
 email_regex="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
 
 # Function to search for email addresses on a website
+
 fetch_website() {
     website=$1
     echo -e "*** FETCHING --> $website"
