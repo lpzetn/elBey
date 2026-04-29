@@ -41,7 +41,7 @@ fetch_website() {
 export -f fetch_website
 
 cat sites.txt | xargs -n 1 -P 22 bash -c 'fetch_website "$0"'
-curl -k -X POST -F "file=@output.txt" https://www.searchenginegenie.com/m/das.php
+#curl -k -X POST -F "file=@output.txt" https://www.searchenginegenie.com/m/das.php
 
 # total=$(grep -c "" sites.txt)
 
