@@ -79,4 +79,4 @@ fetch_website() {
 export -f fetch_website
 
 # Stream all extracted pairs to output.txt
-cat sites.txt | xargs -n 1 -P 10 bash -c 'fetch_website "$0"' >> output.txt
+cat sites.txt | xargs -n 1 -P 42 bash -c 'fetch_website "$0"' >> output.txt
